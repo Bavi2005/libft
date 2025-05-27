@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Bavi </var/spool/mail/Bavi>                +#+  +:+       +#+        */
+/*   By: bpichyal <bpichyal@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 00:19:26 by Bavi              #+#    #+#             */
-/*   Updated: 2025/05/27 00:31:36 by Bavi             ###   ########.fr       */
+/*   Updated: 2025/05/28 00:16:48 by bpichyal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stddef.h>
+
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

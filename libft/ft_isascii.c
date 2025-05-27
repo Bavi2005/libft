@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bpichyal <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: bpichyal <bpichyal@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/26 14:01:30 by bpichyal          #+#    #+#             */
-/*   Updated: 2025/05/26 14:02:38 by bpichyal         ###   ########.fr       */
+/*   Created: 2025/05/21 11:58:04 by bpichyal          #+#    #+#             */
+/*   Updated: 2025/05/28 00:11:05 by bpichyal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+#include "libft.h"
+
+int	ft_isascii(int c)
 {
-	while (*s != (unsigned char)c)
-	{
-		if (*s == '\0')
-			return (NULL);
-		s++;
-	}
-	return ((char *)s);
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
 }

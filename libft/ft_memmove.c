@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Bavi </var/spool/mail/Bavi>                +#+  +:+       +#+        */
+/*   By: bpichyal <bpichyal@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 23:27:25 by Bavi              #+#    #+#             */
-/*   Updated: 2025/05/25 15:09:54 by bpichyal         ###   ########.fr       */
+/*   Updated: 2025/05/28 00:11:52 by bpichyal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include "libft.h"
 //#include <stdio.h>
 //#include <string.h>
+
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

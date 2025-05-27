@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bpichyal <bpichyal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bpichyal <bpichyal@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/25 17:39:54 by bpichyal          #+#    #+#             */
-/*   Updated: 2025/05/25 17:59:36 by bpichyal         ###   ########.fr       */
+/*   Updated: 2025/05/28 00:17:08 by bpichyal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
+
 #include <string.h>
 #include <stdio.h>
 
@@ -23,6 +23,8 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }*/
+
+#include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {

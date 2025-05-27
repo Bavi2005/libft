@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Bavi </var/spool/mail/Bavi>                +#+  +:+       +#+        */
+/*   By: bpichyal <bpichyal@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/27 00:55:18 by Bavi              #+#    #+#             */
-/*   Updated: 2025/05/27 00:55:38 by Bavi             ###   ########.fr       */
+/*   Created: 2025/05/27 00:55:18 by bpichyal          #+#    #+#             */
+/*   Updated: 2025/05/28 00:10:12 by bpichyal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
