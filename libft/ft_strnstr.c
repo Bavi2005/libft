@@ -6,7 +6,7 @@
 /*   By: bpichyal <bpichyal@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 00:41:13 by Bavi              #+#    #+#             */
-/*   Updated: 2025/05/28 00:14:18 by bpichyal         ###   ########.fr       */
+/*   Updated: 2025/05/28 16:34:24 by bpichyal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,27 @@
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *str, const char *to_find, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
 
 	i = 0;
-	if (!str && !len)
+	if (!big && !len)
 		return (0);
-	if (to_find[0] == '\0' || to_find == str)
-		return ((char *)str);
-	while (str[i] != '\0')
+	if (little[0] == '\0' || little == big)
+		return ((char *)big);
+	while (big[i] != '\0')
 	{
 		j = 0;
-		while (str[i + j] == to_find[j] && (i + j) < len)
+		while (big[i + j] == little[j] && (i + j) < len)
 		{
-			if (str[i + j] == '\0' && to_find[j] == '\0')
-				return ((char *)&str[i]);
+			if (big[i + j] == '\0' && little[j] == '\0')
+				return ((char *)&big[i]);
 			j++;
 		}
-		if (to_find[j] == '\0')
-			return ((char *)(str + i));
+		if (little[j] == '\0')
+			return ((char *)(big + i));
 		i++;
 	}
 	return (0);
@@ -42,7 +42,7 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 /*
 #include <stdio.h>
 
-int main() 
+int main(void) 
 {
     const char *haystack = "This is a simple test string.";
     const char *needle = "i";
@@ -50,10 +50,12 @@ int main()
 
     char *result = ft_strnstr(haystack, needle, len);
 
-    if (result != NULL) {
+    if (result != NULL) 
+    {
         printf("Found '%s' in the string at position: %ld\n"
 	, needle, result - haystack);
-    } else {
+    } else 
+    {
         printf("'%s' not found in the first %zu characters of '%s'\n"
 	, needle, len, haystack);
     }

@@ -6,83 +6,77 @@
 /*   By: bpichyal <bpichyal@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 22:58:44 by Bavi              #+#    #+#             */
-/*   Updated: 2025/05/28 00:12:20 by bpichyal         ###   ########.fr       */
+/*   Updated: 2025/05/29 13:11:05 by bpichyal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_strings(char const *s, char c)
+static int	ft_count_words(const char *s, char c)
 {
 	int	i;
-	int	count;
+	int	words;
 
-	count = 1;
 	i = 0;
-	while (s[i] != '\0')
+	words = 0;
+	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] != c)
 		{
-			if (s[i + 1] != c)
-				count++;
+			words++;
+			while (s[i] && s[i] != c)
+				i++;
 		}
-		i++;
+		else
+			i++;
 	}
-	if (s[0] == c)
-		count--;
-	if (s[i - 1] == c)
-		count--;
-	return (count);
+	return (words);
 }
 
-int	ft_delimstrl(char const *s, char c)
+static char	*word_splitter(const char *s, char c)
 {
-	int	len;
-
-	len = 0;
-	while (s[len] != c && s[len] != '\0')
-		len++;
-	return (len);
-}
-
-void	putstr(char *dest, char const *str, int len)
-{
+	char	*word;
 	int		i;
 
 	i = 0;
-	while (i < len)
+	while (s[i] && s[i] != c)
+		i++;
+	word = (char *) malloc(sizeof(char) * (i + 1));
+	if (!word)
+		return (NULL);
+	i = 0;
+	while (s[i] && s[i] != c)
 	{
-		dest[i] = str[i];
+		word[i] = s[i];
 		i++;
 	}
-	dest[i] = '\0';
+	word[i] = '\0';
+	return (word);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**str;
-	size_t	i;
+	int		i;
 	int		j;
-	int		count;
+	char	**words;
 
 	i = 0;
 	j = 0;
-	if (!s)
+	words = (char **) malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
+	if (!words || !s)
 		return (NULL);
-	count = count_strings(s, c);
-	str = malloc (sizeof(char *) * (count + 1));
-	if (!str)
-		return (NULL);
-	while (i < ft_strlen(s) && j < count)
+	while (s[i])
 	{
-		while (s[i] == c)
+		if (s[i] != c)
+		{
+			words[j] = word_splitter(&s[i], c);
+			while (s[i] && s[i] != c)
+				i++;
+			j++;
+		}
+		else
 			i++;
-		str[j] = (char *)malloc(sizeof(char) * (ft_delimstrl(s + i, c) + 1));
-		if (!str[j])
-			return (NULL);
-		putstr(str[j++], s + i, ft_delimstrl(s + i, c));
-		i += ft_delimstrl(s + i, c);
 	}
-	str[j] = NULL;
-	return (str);
+	words[j] = 0;
+	return (words);
 }

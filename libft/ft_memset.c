@@ -6,7 +6,7 @@
 /*   By: bpichyal <bpichyal@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 22:55:42 by Bavi              #+#    #+#             */
-/*   Updated: 2025/05/28 00:11:57 by bpichyal         ###   ########.fr       */
+/*   Updated: 2025/05/29 17:21:19 by bpichyal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*p;
 
-	p = s;
+	p = (unsigned char *)s;
 	while (n-- > 0)
 		*p++ = (unsigned char) c;
 	return (s);

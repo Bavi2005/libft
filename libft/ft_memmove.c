@@ -6,13 +6,9 @@
 /*   By: bpichyal <bpichyal@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 23:27:25 by Bavi              #+#    #+#             */
-/*   Updated: 2025/05/28 00:11:52 by bpichyal         ###   ########.fr       */
+/*   Updated: 2025/05/28 14:09:34 by bpichyal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//#include "libft.h"
-//#include <stdio.h>
-//#include <string.h>
 
 #include "libft.h"
 

@@ -3,16 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bpichyal <bpichyal@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*   By: bpichyal <bpichyal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 22:44:06 by Bavi              #+#    #+#             */
-/*   Updated: 2025/05/28 00:11:48 by bpichyal         ###   ########.fr       */
+/*   Updated: 2025/05/28 13:55:19 by bpichyal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//#include "libft.h"
-//#include <stdio.h>
-//#include <string.h>
 
 #include "libft.h"
 
